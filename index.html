@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <title>Populous select demo</title>
+
+        <script src="javascripts/jquery.js"></script>
+        <script src="javascripts/populous.js"></script>
+
+        <style type="text/css">
+
+            body {
+            margin: 25px;
+            font-family: 'Helvetica Neue', 'Helvetica', arial, sans-serif;
+            }
+
+        </style>
+
+        <script type="text/javascript">
+            $(window).load(function(){
+                $('#country-selector').change(function() {
+                    $('#region-selector').useOptionsAtIndex($(this)[0].selectedIndex);
+                });
+            });
+        </script>
+    </head>
+    <body>
+
+    <form>
+        <select id='country-selector'>
+            <option value='1' rel='#us-address'>United States</option>
+            <option value='2' rel='#ca-address'>Canada</option>
+        </select>
+        <select id='region-selector' class='populous-select' data-updatedable-options='
+    [{ "AL": "Alabama", "AK": "Alaska", "AZ": "Arizona", "AR": "Arkansas", "CA": "California", "CO": "Colorado", "CT": "Connecticut", "DE": "Delaware", "DC": "District of Columbia", "FL": "Florida", "GA": "Georgia", "HI": "Hawaii", "ID": "Idaho", "IL": "Illinois", "IN": "Indiana", "IA": "Iowa", "KS": "Kansas", "KY": "Kentucky", "LA": "Louisiana", "ME": "Maine", "MD": "Maryland", "MA": "Massachusetts", "MI": "Michigan", "MN": "Minnesota", "MS": "Mississippi", "MO": "Missouri", "MT": "Montana", "NE": "Nebraska", "NV": "Nevada", "NH": "New Hampshire", "NJ": "New Jersey", "NM": "New Mexico", "NY": "New York", "ND": "North Dakota", "NC": "North Carolina", "OH": "Ohio", "OK": "Oklahoma", "OR": "Oregon", "PA": "Pennsylvania", "RI": "Rhode Island", "SC": "South Carolina", "SD": "South Dakota", "TN": "Tennessee", "TX": "Texas", "UT": "Utah", "VT": "Vermont", "VA": "Virginia", "WA": "Washington", "WV": "West Virginia", "WI": "Wisconsin", "WY": "Wyoming" }, { "AB": "Alberta", "BC": "British Columbia", "MB": "Manitoba", "NB": "New Brunswick", "NL": "Newfoundland & Labrador", "NS": "Nova Scotia", "NT": "Northwest Territories", "NU": "Nunavut", "ON": "Ontario", "PE": "Prince Edward Island", "QC": "Quebec", "SK": "Saskatchewan", "YT": "Yukon" }]'>
+            <!-- Will be populated by JS. Bitches. -->
+        </select>
+    </form>
+
+    </body>
+</html>
