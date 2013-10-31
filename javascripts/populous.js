@@ -1,6 +1,6 @@
 $(window).load(function(){
 
-    ;(function(_modals, $) {
+    ;(function(_updatable_selects, $) {
         // Class constructor
         var Class = function() {
             return function(params) {
