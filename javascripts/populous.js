@@ -15,7 +15,7 @@ $(window).load(function(){
         UpdatableSelect.prototype = {
             initialize: function(_updatable_select){
                 this.$updatable_select = $(_updatable_select);
-                this.options_array = this.$updatable_select.data('updatedable-options');
+                this.options_array = this.$updatable_select.data('populous-options');
 
                 this.checkValidity();
                 this.useOptionsAtIndex(0); // Show initial options
